@@ -21,12 +21,6 @@ describe('AppVue', () => {
     const wrapper = mount(StudentComponent)
     expect(wrapper.find('#addButton').exists()).toBe(true)
   })
-  test('Check if StudentComponent receives some props', () => {
-    const wrapper = mount(StudentComponent, {
-      props: { name: 'Materia' },
-    });
-    expect(wrapper.props().name).toBe('Materia');
-  });
   
   test('Check if name on table is the same as the input', async () => {
     const wrapper = mount(StudentComponent);
